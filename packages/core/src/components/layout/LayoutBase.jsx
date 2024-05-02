@@ -26,6 +26,20 @@ import {
 
 import { globalProvider } from "shared"
 import { useDispatch, useSelector } from "react-redux"
+import {navs} from '@/routes/navigation'
+
+const formatNavigation = (navs)=>{
+    debugger
+    navs.forEach(element => {
+        element.current = false
+        element.click = ()=>{
+            console.log("BREAK POINT::: CLICK NAV")
+        }
+    })
+
+    return navs
+}
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ")
@@ -43,30 +57,32 @@ function LayoutBase({childrenRoutes}) {
     const dispatch = useDispatch()
 
     const counter = useSelector(coreStore.$counter)
+    console.log("BREAK POINT::: AQUI")
+    const navigation = formatNavigation(navs)
 
-    const navigation = [
-        {
-            name: "Dashboard",
-            onClick: () => {
-                console.log("CLICK DASHBOARD", useStore("core"))
-                dispatch(coreStore.increment())
-            },
-            href: "#",
-            icon: HomeIcon,
-            path:"/members",
-            current: true,
-        },
-        { name: "Team", href: "#", icon: UsersIcon, current: false, path:"/jona1", },
-        { name: "Projects", href: "#", icon: FolderIcon, current: false, path:"/members2",},
-        { name: "Calendar", href: "#", icon: CalendarIcon, current: false, path:"/members3",},
-        {
-            name: "Documents",
-            href: "#",
-            icon: DocumentDuplicateIcon,
-            current: false,
-        },
-        { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
-    ]
+    // const navigation = [
+    //     {
+    //         name: "Dashboard",
+    //         onClick: () => {
+    //             console.log("CLICK DASHBOARD", useStore("core"))
+    //             dispatch(coreStore.increment())
+    //         },
+    //         href: "#",
+    //         icon: HomeIcon,
+    //         path:"/members",
+    //         current: true,
+    //     },
+    //     { name: "Team", href: "#", icon: UsersIcon, current: false, path:"/jona1", },
+    //     { name: "Projects", href: "#", icon: FolderIcon, current: false, path:"/members2",},
+    //     { name: "Calendar", href: "#", icon: CalendarIcon, current: false, path:"/members3",},
+    //     {
+    //         name: "Documents",
+    //         href: "#",
+    //         icon: DocumentDuplicateIcon,
+    //         current: false,
+    //     },
+    //     { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
+    // ]
     const teams = [
         { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
         {

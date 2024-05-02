@@ -33,10 +33,6 @@ function classNames(...classes) {
 }
 
 const Sidebar = ({ navigation, teams, clickItem}) => {
-    debugger
-    console.log("BREAK POINT :: NAVS", navs)
-
-
     return (
         <>
             <HeaderSidebar></HeaderSidebar>
