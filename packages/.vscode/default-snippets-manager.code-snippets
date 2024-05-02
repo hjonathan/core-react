@@ -1,0 +1,45 @@
+{
+	"clog": {
+		"prefix": "clog",
+		"description": "clog",
+		"scope": "javascriptreact",
+		"body": [
+			"console.log(\"BREAK POINT ::\")"
+		]
+	},
+	"Arrow simple": {
+		"prefix": "Arrow simple",
+		"description": "Arrow simple",
+		"scope": "javascriptreact",
+		"body": [
+			"e=>{",
+			"                    ",
+			"                }"
+		]
+	},
+	"Arrow function": {
+		"prefix": "Arrow function",
+		"description": "Arrow function",
+		"scope": "javascriptreact",
+		"body": [
+			"const func = ()=>{",
+			"    ",
+			"}"
+		]
+	},
+	"React file": {
+		"prefix": "react file",
+		"description": "Arrow function",
+		"scope": "javascriptreact",
+		"body": [
+			"import { useState } from \"react\"",
+			"",
+			"const func = () => {",
+			"    return <></>",
+			"}",
+			"",
+			"export default func",
+			""
+		]
+	}
+}

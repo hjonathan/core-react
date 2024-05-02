@@ -1,0 +1,10 @@
+{
+	"clog": {
+		"prefix": "clog",
+		"description": "clog",
+		"scope": "javascriptreact",
+		"body": [
+			"console.log(\"BREAK POINT:::\")"
+		]
+	}
+}
